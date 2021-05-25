@@ -1,0 +1,40 @@
+OS => Windows (Powershell)
+
+1) Collect process information
+=>Go to start
+=>Open Task Manager
+=>All the active and background processes are displayed under Process tab
+=>Details of processes including name, pid, and status are displayed under Details tab
+
+2) To terminate a specific process
+>>Use command taskkill from task kill utility.
+>>It will put the process to halts in a number of ways.
+>>One of which is using identification number or the Process ID.
+>>To open TaskManger:
+>Search 
+>>Task mgr.exe
+>>Ctrl-Shift-Esc
+To identify PID in Windows TaskManager->Details 
+
+
+3) To terminate multiple processes
+>>First, launch the PowerShell application. This can be done by pressing the [Windows Key] + [R] and then typing powershell  in the run box.
+>>Type tasklist in the PowerShell window. Soon you’ll see a list of all the processes running on your operating system, along with relevant info such as session number and PID, and memory usage.
+>>Make note of the PID on the process that you want to kill and then execute the following command: taskkill /f /PID 00000. Replace the zeros with the PID you want to kill.
+For many Processes
+
+For example, taskkill /IM loom.exe /F will kill all processes that are associated with the Loom service. 
+
+
+Additional info:
+
+Pid can be obtained in 2 ways:
+a) >>tasklist
+b) >>Get-Process
+
+Process can also be killed using Process Explorer
+=> Go to start
+=> Open process explorer
+=> Right click on the process you want to terminate
+=> Select 'Kill Process'
+=> Click 'OK'
